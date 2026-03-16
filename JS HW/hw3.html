@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW JS Day3</title>
+</head>
+<body>
+    <script>
+        let userProfile={
+            username:" CoolUser99 ",
+            bio:" I LOVE coding! JavaScript is Great!!! "
+
+        }
+        function cleanUserBio(profile){
+            let cleanusername=userProfile.username.trim().toLowerCase();
+            let cleanbio=userProfile.bio.trim().toLowerCase();
+            let replacebio=cleanbio.replace(/javascript/g , "JS");
+            let countbio=replacebio.length;
+
+            return{
+                cleanusername,
+                replacebio,
+                countbio,
+            }
+        }
+        console.log(cleanUserBio(userProfile));
+    </script>
+
+</body>
+</html>

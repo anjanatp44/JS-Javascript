@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comment Filter</title>
+</head>
+<body>
+    <script>
+        function filterComment(comment) {
+            // 1. Replace banned words ("bad", "ugly", "stupid") with "***" (case-insensitive)
+            const bannedWords = /bad|ugly|stupid/gi;
+            const cleanedComment = comment.replace(bannedWords, "***");
+
+            // 2. Count how many numbers are in the comment
+            const numberMatches = comment.match(/\d+/g);
+            const numberCount = numberMatches ? numberMatches.length : 0;
+
+            // 3. Count how many words begin with a capital letter
+            const capitalMatches = comment.match(/\b[A-Z][a-z]*/g);
+            const capitalCount = capitalMatches ? capitalMatches.length : 0;
+
+            // 4. Return final message
+            const result = `
+                Cleaned Comment: ${cleanedComment}
+                Numbers Found: ${numberCount}
+                Capitalized Words: ${capitalCount}
+            `;
+            return result;
+        }
+
+        // Test the function
+        const testComment = "I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great.";
+        document.write("<pre>" + filterComment(testComment) + "</pre>");
+    </script>
+</body>
+</html>
