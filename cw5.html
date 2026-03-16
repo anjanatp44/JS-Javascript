@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let order = {
+    itemName: "Smart Watch",
+    isDelivered: true,
+    daysSinceDelivery:5
+};
+if (order.isDelivered && order.daysSinceDelivery <=7)
+console.log("Eligible for Return");
+else
+console.log("Return Period Expired");
+if("itemName" in order);
+console.log("itemName property exists in the object");
+delete order.daysSinceDelivery;
+console.log(order);
+
+
+    </script>
+    
+</body>
+</html>

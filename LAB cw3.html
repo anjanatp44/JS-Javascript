@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <script>
+        var feedback = "   I loved the FOOD and the service!   ";
+        feedback=feedback.trim();
+        document.write(feedback + "<br>")
+       
+        feedback=feedback.toLowerCase();
+        document.write(feedback + "<br>")
+
+         feedback=feedback.replace("food","ambience");
+        document.write(feedback + "<br>")
+
+        var position= feedback.indexOf("service");
+        document.write(position + "<br>")
+
+        var output = feedback.split(" ");
+        document.write(output + "<br>")
+        
+      
+        
+        
+    </script>
+    
+</body>
+</html>
